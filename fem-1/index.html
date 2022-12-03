@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Manage Landing Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,23 @@
   <body>
     <header class="primary-header">
       <div class="container">
+        <div class="nav-wrapper">
         <a href=""><img src="images/logo.svg" alt="logo"></a>
-        <nav class="primary-navigation"><ul>
+        <button aria-controls="primary-navigation" class="mobile-nav-toggle">
+          <img src="images/icon-hamburger.svg" class="icon-hamburger" alt="">
+          <img src="images/icon-close.svg" class="icon-close" alt="">
+          <span class="visually-hidden">Menu</span></button>
+        
+        <nav class="primary-navigation" >
+          <ul aria-label="Primary" role="list" class="nav-list" id="primary-navigation">
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Product</a></li>
           <li><a href="#">About Us</a></li>
           <li><a href="#">Careers</a></li>
           <li><a href="#">Community</a></li>
         </ul></nav>
-        <button class="button">Get Started</button>
+        <button class="button | display-sm-none display-md-inline-flex" >Get Started</button>
+      </div>
       </div>
       
     </header>
@@ -83,7 +91,7 @@
         <button class="button">Get Started</button>
       </section>
 
-      <section class="cta | bg-accent-400 text-neutral-100 padding-block-7a00">
+      <section class="cta | bg-accent-400 text-neutral-100 padding-block-700">
         <div class="container">
           <div class="even-columns">
             <div><p class="fs-secondary-heading fw-bold">Simplify how your team works today.</p></div>
@@ -127,6 +135,8 @@
       </div>
     </footer>
 
-    <button>hello there</button>
+    
+    <script type="module" src="/main.js"></script>
+
   </body>
 </html>
