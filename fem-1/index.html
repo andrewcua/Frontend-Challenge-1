@@ -9,13 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.css" />
+<script src="https://unpkg.com/a11y-slider@latest/dist/a11y-slider.js" defer></script>
+
 
   </head>
   <body>
+
+    <script>
+      const slider = new A11YSlider(document.querySelector('.slider'), {
+        adaptiveHeight: true,
+        dots: false
+      });
+    </script>
+    
     <header class="primary-header">
       <div class="container">
         <div class="nav-wrapper">
-        <a href=""><img src="images/logo.svg" alt="logo"></a>
+        <a href=""><svg style="--logo-color: purple" class="icon" width="146" height="24" aria-label="home">
+          <use xlink:href="images/logo.svg#logo"></use>
+        </svg></a>
         <button aria-controls="primary-navigation" class="mobile-nav-toggle">
           <img src="images/icon-hamburger.svg" class="icon-hamburger" alt="">
           <img src="images/icon-close.svg" class="icon-close" alt="">
@@ -36,47 +49,58 @@
     </header>
 
     <main>
-      <section class="padding-block-900">
+      <section class="hero | padding-block-900">
         <div class="container">
           <div class="even-columns">
+            <div class="flow">
             <div>
               <h1 class="fs-primary-heading fw-bold">
                Bring everyone together to build better products.
               </h1>
-              <p>Manage makes it simple for software view.</p>
+              <p>Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view. </p>
               <button class="button">Get Started</button>
             </div>
-            <div>
+          </div>
+            <div class="images-with-blob-bg">
               <img src="images/illustration-intro.svg" alt="bars and graphs" class="">
             </div>
+          
           </div>
         </div>
       </section>
       <section class="padding-block-900">
         <div class="container">
           <div class="even-columns">
-<div>
-  <h2 class="fs-tertiary-heading fw-bold">
+<div class="flow text-center-sm-only margin-bottom-700" >
+  <h2 class="fs-tertiary-heading fw-bold ">
     What's different about Manage?
   </h2>
-  <p>Manage provides all functional tailor-made for modern digital product teams</p>
+  <p>Manage provides all functional tailor-made for modern digital product teams. Manage provides all functional tailor-made for modern digital product teams</p>
 
 </div>
 
 <div>
-  <ul class="numbered-items" role="list">
+  <ul class="numbered-items | flow" role="list">
     <li>
-      <h3 class="fs-600 fw-bold">Track everything here</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa officia accusamus dolorem. Commodi optio quo beatae consequatur ad vero.</p>
+      <div class="flow" style="--flow-spacer: 1em">
+      <h3 class="numbered-items_title | fs-600 fw-bold">Track everything here</h3>
+      <p class="numbered-items_body " data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa officia accusamus dolorem. Commodi optio quo beatae consequatur ad vero.</p>
+    </div>
     </li>
     <li>
-      <h3 class="fs-600 fw-bold">Track everything here</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa officia accusamus dolorem. Commodi optio quo beatae consequatur ad vero.</p>
+      <div class="flow" style="--flow-spacer: 1em">
+      <h3 class="numbered-items_title | fs-600 fw-bold">Track everything here</h3>
+      <p class="numbered-items_body" data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa officia accusamus dolorem. Commodi optio quo beatae consequatur ad vero.</p>
+    </div>
     </li>
+
     <li>
-      <h3 class="fs-600 fw-bold">Track everything here</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa officia accusamus dolorem. Commodi optio quo beatae consequatur ad vero.</p>
+      <div class="flow" style="--flow-spacer: 1em">
+      <h3 class="numbered-items_title | fs-600 fw-bold">Track everything here</h3>
+      <p class="numbered-items_body" data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa officia accusamus dolorem. Commodi optio quo beatae consequatur ad vero.</p>
+    </div>
     </li>
+
     
 
   </ul>
@@ -85,17 +109,51 @@
           </div>
         </div>
       </section>
-
-      <section class="carousel padding-block-700">
+      <section class="carousel padding-block-700 text-center">
+        <div class="container">
         <h2 class="fs-secondary-heading">What they've said</h2>
+        
+        <!-- Carousel here -->
+        <ul class="slider ">
+          <li>
+            <img src="images/avatar-ali.png" alt="">
+          <div class="slider-content | flow" style="--flow-spacer: 1rem" >
+            <h3 class="fw-bold">Ali Bravo</h3>
+            <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, iste? Voluptates aliquid deserunt similique hic natus ab, architecto sed ex?</p>
+          </div>
+          </li>
+          <li>
+            <img src="images/avatar-anisha.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem" >
+              <h3 class="fw-bold">Mulan Gulaman</h3>
+              <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, iste? Voluptates aliquid deserunt similique hic natus ab, architecto sed ex?</p>
+            </div>
+          </li>
+          <li>
+            <img src="images/avatar-richard.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem" >
+              <h3 class="fw-bold">The Coldplay</h3>
+              <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, iste? Voluptates aliquid deserunt similique hic natus ab, architecto sed ex?</p>
+            </div>
+          </li>
+          <li>  <img src="images/avatar-shanai.png" alt="">
+            <div class="slider-content | flow" style="--flow-spacer: 1rem" >
+              <h3 class="fw-bold">The Eminem</h3>
+              <p data-width="wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, iste? Voluptates aliquid deserunt similique hic natus ab, architecto sed ex?</p></li>
+            </div>
+        </ul>
+  
+
         <button class="button">Get Started</button>
+        
+      </div>
       </section>
 
-      <section class="cta | bg-accent-400 text-neutral-100 padding-block-700">
+      <section class="cta | bg-accent-400 text-neutral-100 padding-block-900">
         <div class="container">
-          <div class="even-columns">
-            <div><p class="fs-secondary-heading fw-bold">Simplify how your team works today.</p></div>
-            <div><button class="button" data-type="inverted">Get Started</button></div>
+          <div class="even-columns vertical-align-center justify-self-end-md">
+            <div><p class="fs-primary-heading fw-bold">Simplify how your team works today.</p></div>
+            <div class="justify-self-end-md"><button class="button" data-type="inverted">Get Started</button></div>
           </div>
         
         </div>
@@ -103,21 +161,36 @@
 
     </main>
 
-    <footer class="bg-neutral-900 text-neutral-100">
+    <footer class="primary-footer padding-block-700 bg-neutral-900 text-neutral-100">
       <div class="container">
-        <div class="even-columns">
-        <div>
-          <a href="#"><img src="images/logo.svg" alt=""></a>
-          <ul role="list" aria-label="social links">
-            <li><a href="#" aria-label="facebook"></a></li>
-            <li><a href="#" aria-label="youtube"></a></li>
-            <li><a href="#" aria-label="twitter"></a></li>
-            <li><a href="#" aria-label="pinterest"></a></li>
-            <li><a href="#" aria-label="instagram"></a></li>
+        <div class="primary-footer-wrapper">
+        <div class="primary-footer-logo-social">
+          <a href="#"><svg class="icon" width="146" height="24" aria-label="home">
+            <use xlink:href="images/logo.svg#logo"></use>
+          </svg></a>
+          
+          <ul class="social-list" role="list" aria-label="social links">
+            <li><a href="#" aria-label="facebook"><svg class="social-icon">
+              <use xlink:href="images/social-icons.svg#icon-facebook"></use>
+            </svg></a></li>
+            <li><a href="#" aria-label="youtube"><svg class="social-icon">
+              <use xlink:href="images/social-icons.svg#icon-youtube"></use>
+            </svg></a></li>
+            <li><a href="#" aria-label="twitter"><svg class="social-icon">
+              <use xlink:href="images/social-icons.svg#icon-twitter"></use>
+            </svg></a></li>
+            <li><a href="#" aria-label="pinterest"><svg class="social-icon">
+              <use xlink:href="images/social-icons.svg#icon-pinterest"></use>
+            </svg></a></li>
+            <li><a href="#" aria-label="instagram"><svg class="social-icon">
+              <use xlink:href="images/social-icons.svg#icon-instagram"></use>
+            </svg></a></li>
           </ul>
         </div>
-        <div>
-          <nav class="footer-nav"><ul role="list">
+        <div class="primary-footer-nav">
+          <nav class="footer-nav">
+            
+            <ul role="list" class="flow" style="--flow-spacer: 1em">
             
             <li><a href="#">Home</a></li>
             <li><a href="#">Pricing</a></li>
@@ -128,8 +201,10 @@
             <li><a href="#">Privacy Policy</a></li>
           </ul></nav>
         </div>
-        <div>
-          <form action=""><input type="email"><button class="button">Go</button></form>
+        <div class="primary-footer-form">
+          
+          <form action=""><input type="email"><button class="button" data-shadow="none">Go</button></form>
+          <p>Copyright 2020. All Rights Reserved</p>
         </div>
       </div>
       </div>
